@@ -1,0 +1,72 @@
+<!--Saory Monserrat Escobedo Guzman 248307,Grupo A, 22 de septiembre del 2025, Diseño web HTML3 y CSS3 adaptativo-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitacora</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="reset.css"></link>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="img/icoBill.ico" rel="icon"></link>
+    
+</head>
+<body>
+    
+     <div class="menuInicial">
+
+        <div class="IconoPrinc">
+         <div class="c">
+            <a href="pagPrin.html"><img width="auto" height="55" src="img/icoBILLPror.png"> </img></a>
+          </div>
+        </div>
+
+        <div class="selecc"> <!-- aca van las cosas de opciones de menu-->
+            <h2 style="color: rgb(27, 27, 27);">
+                <br><br>
+                <a href="pagPrin.html" class="texesp tipografia">Bitacora</a>
+                <a href="pueba.html" class="texesp tipografia">Ilustracion</a>
+
+            </h2>
+        </div> 
+
+     </div>
+
+      <div class="general">
+
+            <div class="carrusel">
+                <img src="img/Multilenguaje/1.jpg" class="active">
+                <img src="img/Multilenguaje/2.jpg">
+                <img src="img/Multilenguaje/3.jpg">
+                <img src="img/Multilenguaje/4.jpg">
+                <img src="img/Multilenguaje/5.jpg">
+                <img src="img/Multilenguaje/6.jpg">
+                <img src="img/Multilenguaje/7.jpg">
+                <img src="img/Multilenguaje/8.jpg">
+                <img src="img/Multilenguaje/9.jpg">
+
+                <button class="boton prev" onclick="mover(-1)">❮</button>
+                <button class="boton next" onclick="mover(1)">❯</button>
+             </div>
+
+  <script>
+        let indice = 0;
+        const imagenes = document.querySelectorAll(".carrusel img");
+
+        function mostrarImagen(i) {
+             imagenes.forEach(img => img.classList.remove("active"));
+            imagenes[i].classList.add("active");
+        }
+
+        function mover(n) {
+             indice += n;
+            if (indice < 0) indice = imagenes.length - 1;
+             if (indice >= imagenes.length) indice = 0;
+            mostrarImagen(indice);
+            }
+    </script>
+
+<br><br>
+
+</body>
+</html>
